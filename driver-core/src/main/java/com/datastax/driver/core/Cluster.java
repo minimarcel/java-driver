@@ -1111,7 +1111,7 @@ public class Cluster implements Closeable {
             this.configuration = configuration;
             this.configuration.register(this);
 
-            this.executor = makeExecutor(Runtime.getRuntime().availableProcessors(), "Cassandra Java Driver worker-%d");
+            this.executor = makeExecutor(1, "Cassandra Java Driver worker-%d");
             this.blockingExecutor = makeExecutor(2, "Cassandra Java Driver blocking tasks worker-%d");
 
             this.metadata = new Metadata(this);

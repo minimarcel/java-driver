@@ -6,6 +6,7 @@ CHANGELOG
 
 - [bug] ClusteringColumn annotation not working with specified ordering (JAVA-408)
 - [improvement] Fail BoundStatement if null values are not set explicitly (JAVA-410)
+- [bug] Handle UDT and tuples in BuiltStatement.toString (JAVA-416)
 
 Merged from 2.0 branch:
 
@@ -13,6 +14,8 @@ Merged from 2.0 branch:
 - [bug] Fix handling of SimpleStatement with values in query builder
   batches (JAVA-393)
 - [bug] Ensure pool is properly closed in onDown (JAVA-417)
+- [bug] Fix tokenMap initialization at startup (JAVA-415)
+- [bug] Avoid deadlock on close (JAVA-418)
 
 
 2.1.0-rc1:
